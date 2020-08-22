@@ -31,7 +31,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Zg-US-DEx">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Xz0-gl-5IH">
+                        <barButtonItem key="rightBarButtonItem" title="Play" id="Xz0-gl-5IH">
                             <connections>
                                 <segue destination="xwz-pp-iql" kind="show" id="cK7-Tg-iqg"/>
                             </connections>
