@@ -28,12 +28,20 @@ class ViewController: UIViewController {
         count += 1
         if count == 30 {
             print("Done!")
+            
+            var timeAppend: [Double] = UserDefaults.standard.object(forKey: "timeArray") as? [Double] ?? []
+            timeAppend.append(currentTime)
             //append time to timearray here
-            UserDefaults.standard.set(count, forKey: "timeArray")
+            UserDefaults.standard.set(timeAppend, forKey: "timeArray")
             //refresh
             //unwind here
+            
+            performSegue(withIdentifier: "finished clicker", sender: nil)
+            
         }
         counterLabel.text = String(count)
+        
+        
         
     }
     

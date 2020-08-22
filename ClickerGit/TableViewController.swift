@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -17,29 +17,38 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        var documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        documentsPath.removeLast(9)
+        documentsPath.append("Library/Preferences/")
+        print("Your plist is at 💁‍♀️: \(documentsPath)")
+
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return UserDefaults.standard.array(forKey: "timeArray")?.count ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuse Identifier", for: indexPath)
 
         // Configure the cell...
-
+        if let checkOptional = UserDefaults.standard.array(forKey: "timeArray")?[indexPath.row]{
+            cell.textLabel?.text = "\(checkOptional)s"
+        }
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,5 +94,12 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToTable(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+        
+        tableView.reloadData()
+    }
 
 }

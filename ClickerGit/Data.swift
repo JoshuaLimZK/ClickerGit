@@ -9,12 +9,12 @@
 import Foundation
 
 class Data {
-    var time : Float
-    var timeArray : [Float]
+    var time : Double
+    var timeArray : [Double]
     
     
-    init(time: Float,timeArray: Float) {
+    init(time: Double,timeArray: Double) {
         self.time = time
-        self.timeArray = UserDefaults.standard.object(forKey: "Time") as! [Float]
+        self.timeArray = UserDefaults.standard.object(forKey: "Time") as! [Double]
     }
 }
