@@ -7,17 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Past Scores-->
         <scene sceneID="Zhf-ug-zOZ">
             <objects>
                 <tableViewController id="c3y-wu-BWZ" customClass="TableViewController" customModule="ClickerGit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RQb-Bp-yPh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RQb-Bp-yPh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuse Identifier" textLabel="PA3-JQ-Tny" rowHeight="68" style="IBUITableViewCellStyleDefault" id="n6J-ty-go4">
-                                <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n6J-ty-go4" id="epV-mN-5ab">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="c3y-wu-BWZ" id="bJQ-8e-doT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4Zg-US-DEx">
+                    <navigationItem key="navigationItem" title="Past Scores" id="4Zg-US-DEx">
                         <barButtonItem key="rightBarButtonItem" title="Play" id="Xz0-gl-5IH">
                             <connections>
                                 <segue destination="xwz-pp-iql" kind="show" id="cK7-Tg-iqg"/>
@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="14.732142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Click!-->
         <scene sceneID="jV7-xx-vAI">
             <objects>
                 <viewController id="xwz-pp-iql" customClass="ViewController" customModule="ClickerGit" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                             <outletCollection property="gestureRecognizers" destination="7Ja-fI-wfK" appends="YES" id="jVS-8l-QJA"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="ZoC-t3-h2l"/>
+                    <navigationItem key="navigationItem" title="Click!" id="ZoC-t3-h2l"/>
                     <connections>
                         <outlet property="counterLabel" destination="dgy-H0-EHR" id="dDy-Y7-4bP"/>
                         <outlet property="timerLabel" destination="dK3-k6-41L" id="gnQ-lZ-kJA"/>
