@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xwz-pp-iql">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="jV7-xx-vAI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="xwz-pp-iql" customClass="ViewController" customModule="ClickerGit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdg-fW-XmL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-H0-EHR">
+                                <rect key="frame" x="0.0" y="403" width="414" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="dgy-H0-EHR" firstAttribute="height" secondItem="gdg-fW-XmL" secondAttribute="height" multiplier="0.1" id="7GM-hG-Rn3"/>
+                            <constraint firstItem="dgy-H0-EHR" firstAttribute="centerX" secondItem="gdg-fW-XmL" secondAttribute="centerX" id="C4z-gC-3bz"/>
+                            <constraint firstItem="dgy-H0-EHR" firstAttribute="width" secondItem="gdg-fW-XmL" secondAttribute="width" id="cLF-9p-H4j"/>
+                            <constraint firstItem="dgy-H0-EHR" firstAttribute="centerY" secondItem="gdg-fW-XmL" secondAttribute="centerY" id="si4-ef-HW7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YUq-pW-yEa"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7Ja-fI-wfK" appends="YES" id="jVS-8l-QJA"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="ZoC-t3-h2l"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="dgy-H0-EHR" id="dDy-Y7-4bP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVv-cY-vo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Ja-fI-wfK">
+                    <connections>
+                        <action selector="screenPressed:" destination="xwz-pp-iql" id="r8O-7r-cQ5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="14.732142857142856"/>
         </scene>
     </scenes>
 </document>
