@@ -15,21 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-H0-EHR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-H0-EHR">
                                 <rect key="frame" x="0.0" y="403" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-k6-41L">
+                                <rect key="frame" x="20" y="71" width="374" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="dgy-H0-EHR" firstAttribute="height" secondItem="gdg-fW-XmL" secondAttribute="height" multiplier="0.1" id="7GM-hG-Rn3"/>
-                            <constraint firstItem="dgy-H0-EHR" firstAttribute="centerX" secondItem="gdg-fW-XmL" secondAttribute="centerX" id="C4z-gC-3bz"/>
-                            <constraint firstItem="dgy-H0-EHR" firstAttribute="width" secondItem="gdg-fW-XmL" secondAttribute="width" id="cLF-9p-H4j"/>
-                            <constraint firstItem="dgy-H0-EHR" firstAttribute="centerY" secondItem="gdg-fW-XmL" secondAttribute="centerY" id="si4-ef-HW7"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YUq-pW-yEa"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="7Ja-fI-wfK" appends="YES" id="jVS-8l-QJA"/>
@@ -38,6 +40,7 @@
                     <navigationItem key="navigationItem" id="ZoC-t3-h2l"/>
                     <connections>
                         <outlet property="counterLabel" destination="dgy-H0-EHR" id="dDy-Y7-4bP"/>
+                        <outlet property="timerLabel" destination="dK3-k6-41L" id="gnQ-lZ-kJA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVv-cY-vo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
