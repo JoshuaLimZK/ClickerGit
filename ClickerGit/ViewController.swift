@@ -25,8 +25,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func screenPressed(_ sender: Any) {
-        
         count += 1
+        if count == 30 {
+            print("Done!")
+            //append time to timearray here
+            UserDefaults.standard.set(count, forKey: "timeArray")
+            //refresh
+            //unwind here
+        }
         counterLabel.text = String(count)
         
     }
