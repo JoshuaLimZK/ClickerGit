@@ -1,3 +1,3 @@
 # ClickerGit
 
-![Group Photo](HappyFamily.png)
+![Group Photo](SadFamily.png)
